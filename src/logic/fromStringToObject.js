@@ -1,17 +1,18 @@
 export const fromStringToObject = str => {
   const commandsArr = str.split("\n");
 
-  const objectCommands = commandsArr.map(item => {
+  return commandsArr.map(item => {
     return getCommands(item.split(" "));
   });
-
-  return objectCommands;
 };
 
 const getCommands = command => {
   const [commandType, ...commandValue] = command;
 
   return {
-    [commandType]: commandValue
+    [commandType]:
+      commandType !== "B"
+        ? [...commandValue.map(element => +element)]
+        : [+commandValue[0], +commandValue[1], commandValue[2]]
   };
 };
