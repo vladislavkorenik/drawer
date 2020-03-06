@@ -1,16 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { FileInput } from "./components/FileInput/FileInput";
 import { DataOutput } from "./components/DataOutput/DataOutput";
 import { DownloadButton } from "./components/DownloadButton/DownloadButton";
+import { drawing } from "./logic/drawer";
 
 function App() {
-  const [fileData, setFileData] = useState({ text: "No data", href: null });
+  const [fileData, setFileData] = useState([]);
+  const [outputDate, setOutputData] = useState({
+    text: "No data",
+    href: null
+  });
+
+  useEffect(() => {
+    if (fileData[0]) {
+      setOutputData(drawing(fileData));
+    }
+  }, [fileData]);
+
   return (
     <div className="App">
-      <FileInput setFileData={setFileData} />
-      <DataOutput data={fileData.text} />
-      <DownloadButton href={fileData.href} />
+      <FileInput setFileData={setFileData} setOutputData={setOutputData} />
+      <DataOutput data={outputDate.text} />
+      <DownloadButton href={outputDate.href} />
     </div>
   );
 }

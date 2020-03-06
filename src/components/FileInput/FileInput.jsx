@@ -1,7 +1,8 @@
 import React from "react";
 import "./FileInput.css";
+import { fromStringToObject } from "../../logic/fromStringToObject";
 
-export const FileInput = ({ setFileData }) => {
+export const FileInput = ({ setFileData, setOutputData }) => {
   const readFile = e => {
     const file = e.target.files[0];
     const fileName = file ? file.name : "";
@@ -11,17 +12,14 @@ export const FileInput = ({ setFileData }) => {
       reader.readAsText(file);
 
       reader.onload = function() {
-        setFileData({
-          text: reader.result,
-          href: `data:text/plain;content-disposition=attachment;filename=file,${reader.result}`
-        });
+        setFileData(fromStringToObject(reader.result));
       };
 
       reader.onerror = function() {
-        setFileData(reader.error);
+        setOutputData(reader.error);
       };
     } else
-      setFileData({
+      setOutputData({
         text: `${fileName ? "Invalid extension" : "Try again"}`,
         href: null
       });
