@@ -1,8 +1,9 @@
-export const isNumericArray = Array => {
-  Array.forEach(element => {
-    if (isNaN(parseFloat(element)) && !isFinite(element)) {
+export const isNumericArray = array => {
+  for (let i = 0; i < array.length; i++) {
+    if (isNaN(parseFloat(array[i])) && !isFinite(array[i])) {
       return false;
     }
-  });
+  }
+
   return true;
 };

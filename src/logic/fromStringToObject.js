@@ -1,8 +1,7 @@
 export const fromStringToObject = str => {
   const commandsArr = str.split("\n");
-
   return commandsArr.map(item => {
-    return getCommands(item.split(" "));
+    return getCommands(item.trim().split(" "));
   });
 };
 

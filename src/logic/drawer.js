@@ -1,8 +1,9 @@
 import { isNumericArray } from "./isNumericArray";
-import {copyMatrix} from "./copyMatrix";
+import { copyMatrix } from "./copyMatrix";
 
 export const drawing = commands => {
   let canvasMatrixArray = [];
+
 
   if (!commands[0].hasOwnProperty("C") || !isValidCommand("C", commands[0].C)) {
     return { text: "Can't draw without canvas", href: null };
@@ -15,22 +16,26 @@ export const drawing = commands => {
           canvasMatrixArray.push(createCanvas(...obj.C));
           break;
         case "L":
-          canvasMatrixArray = checkError(
-            canvasMatrixArray,
-            createLine(
-              canvasMatrixArray[canvasMatrixArray.length - 1],
-              ...obj.L
-            )
-          );
+          canvasMatrixArray = isValidCommand("L", obj.L)
+            ? checkError(
+                canvasMatrixArray,
+                createLine(
+                  canvasMatrixArray[canvasMatrixArray.length - 1],
+                  ...obj.L
+                )
+              )
+            : canvasMatrixArray;
           break;
         case "R":
-          canvasMatrixArray = checkError(
-            canvasMatrixArray,
-            createRectangle(
-              canvasMatrixArray[canvasMatrixArray.length - 1],
-              ...obj.R
-            )
-          );
+          canvasMatrixArray = isValidCommand("R", obj.R)
+            ? checkError(
+                canvasMatrixArray,
+                createRectangle(
+                  canvasMatrixArray[canvasMatrixArray.length - 1],
+                  ...obj.R
+                )
+              )
+            : canvasMatrixArray;
           break;
         case "B":
           break;
@@ -39,7 +44,7 @@ export const drawing = commands => {
       }
     }
   });
-  console.log(canvasMatrixArray);
+
   const outputCanvas = fromMatrixToString(canvasMatrixArray);
   return {
     text: outputCanvas,
@@ -48,33 +53,53 @@ export const drawing = commands => {
 };
 
 const createRectangle = (canvas, x1, y1, x2, y2) => {
-  const canvasWithRectangle = copyMatrix(canvas)
+  console.log('lol')
+  let canvasWithRectangle = [];
+
+  canvasWithRectangle = createHorizontalLine(canvas, x1, x2, y1);
+  canvasWithRectangle = createHorizontalLine(canvasWithRectangle, x1, x2, y2);
+  canvasWithRectangle = createVerticalLine(canvasWithRectangle, y1, y2, x1);
+  canvasWithRectangle = createVerticalLine(canvasWithRectangle, y1, y2, x2);
+
   return canvasWithRectangle;
 };
 
 const createLine = (canvas, x1, y1, x2, y2) => {
-  const canvasWithLine = copyMatrix(canvas);
-  const symbol = "x";
+  let canvasWithLine = [];
   const isVertical = x1 === x2;
   const isHorizontal = y1 === y2;
 
   if (isVertical) {
-    for (let i = 1; i < canvasWithLine.length - 1; i++) {
-      if (i >= y1 && i <= y2) {
-        canvasWithLine[i][x1] = symbol;
-      }
-    }
-  }
-
-  if (isHorizontal) {
-    for (let i = 1; i < canvasWithLine[0].length - 1; i++) {
-      if (i >= x1 && i <= x2) {
-        canvasWithLine[y1][i] = symbol;
-      }
-    }
+    canvasWithLine = createVerticalLine(canvas, y1, y2, x1);
+  } else if (isHorizontal) {
+    canvasWithLine = createHorizontalLine(canvas, x1, x2, y1);
   }
 
   return isVertical || isHorizontal ? canvasWithLine : false;
+};
+
+const createVerticalLine = (canvas, y1, y2, x) => {
+  const canvasWithVerticalLine = copyMatrix(canvas);
+  const symbol = "x";
+  for (let i = 1; i < canvasWithVerticalLine.length - 1; i++) {
+    if (i >= y1 && i <= y2) {
+      canvasWithVerticalLine[i][x] = symbol;
+    }
+  }
+
+  return canvasWithVerticalLine;
+};
+
+const createHorizontalLine = (canvas, x1, x2, y) => {
+  const canvasWithHorizontalLine = copyMatrix(canvas);
+  const symbol = "x";
+  for (let i = 1; i < canvasWithHorizontalLine[0].length - 1; i++) {
+    if (i >= x1 && i <= x2) {
+      canvasWithHorizontalLine[y][i] = symbol;
+    }
+  }
+
+  return canvasWithHorizontalLine;
 };
 
 const createCanvas = (width, height) => {
