@@ -11,7 +11,7 @@ const getCommands = command => {
   return {
     [commandType]:
       commandType !== "B"
-        ? [...commandValue.map(element => +element)]
+        ? [...commandValue.map(element => +element )]
         : [+commandValue[0], +commandValue[1], commandValue[2]]
   };
 };

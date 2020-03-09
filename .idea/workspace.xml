@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bd909eb-0e35-4911-baea-c0ead082eade" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/logic/fromMatrixToString.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/validation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/drawer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/fromStringToObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/fromStringToObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/isNumericArray.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/isNumericArray.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,8 @@
       <workItem from="1583426441081" duration="10912000" />
       <workItem from="1583441749919" duration="1470000" />
       <workItem from="1583443323574" duration="7220000" />
-      <workItem from="1583502322834" duration="18487000" />
+      <workItem from="1583502322834" duration="19320000" />
+      <workItem from="1583767658590" duration="6442000" />
     </task>
     <servers />
   </component>
