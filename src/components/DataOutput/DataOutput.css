@@ -1,0 +1,10 @@
+.dataOutput {
+  position: relative;
+}
+
+.dataOutput__button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+

@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bd909eb-0e35-4911-baea-c0ead082eade" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/logic/fromMatrixToString.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/validation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DataOutput/DataOutput.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ErrorsList/ErrorsList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ErrorsList/ErrorsList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ErrorsList/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/createOutputObject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DataOutput/DataOutput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DataOutput/DataOutput.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DownloadButton/DownloadButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DownloadButton/DownloadButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FileInput/FileInput.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FileInput/FileInput.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/drawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/fromStringToObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/fromStringToObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/isNumericArray.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/validation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -40,8 +50,11 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\vlady\AppData\Roaming\npm\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="Node.js.createOutputObject.js">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="createOutputObject.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/logic/createOutputObject.js" working-dir="$PROJECT_DIR$/src/logic">
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -54,6 +67,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.createOutputObject.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -69,7 +87,8 @@
       <workItem from="1583441749919" duration="1470000" />
       <workItem from="1583443323574" duration="7220000" />
       <workItem from="1583502322834" duration="19320000" />
-      <workItem from="1583767658590" duration="6442000" />
+      <workItem from="1583767658590" duration="6472000" />
+      <workItem from="1583841720598" duration="7665000" />
     </task>
     <servers />
   </component>
@@ -80,10 +99,30 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="0" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583843903590">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583843903590" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583428112238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583428112238" />
+    <state width="936" height="280" key="GridCell.Tab.0.bottom" timestamp="1583846647831">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583846647831" />
+    <state width="936" height="280" key="GridCell.Tab.0.center" timestamp="1583846647831">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583846647831" />
+    <state width="936" height="280" key="GridCell.Tab.0.left" timestamp="1583846647831">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583846647831" />
+    <state width="936" height="280" key="GridCell.Tab.0.right" timestamp="1583846647831">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583846647831" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1583435769969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -92,9 +131,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="143" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583575938368" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583505502351">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583847062068">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583505502351" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583847062068" />
   </component>
 </project>

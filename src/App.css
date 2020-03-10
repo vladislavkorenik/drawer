@@ -7,4 +7,6 @@
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }

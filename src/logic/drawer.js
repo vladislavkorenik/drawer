@@ -1,13 +1,17 @@
 import { copyMatrix } from "./copyMatrix";
 import { checkError, isDotVisited, isValidCommand } from "./validation";
 import { fromMatrixToString } from "./fromMatrixToString";
+import { createOutputObject } from "./createOutputObject";
 
 export const drawing = commands => {
   let canvasMatrixArray = [];
   const canvasParams = commands[0].C;
+  const errorsArray = [];
 
   if (!commands[0].hasOwnProperty("C") || !isValidCommand("C", commands[0].C)) {
-    return { text: "Can't draw without canvas", href: null };
+    errorsArray.push("Can't draw without canvas");
+
+    return createOutputObject("No data", errorsArray, null);
   }
 
   commands.forEach(obj => {
@@ -17,38 +21,51 @@ export const drawing = commands => {
           canvasMatrixArray.push(createCanvas(...obj.C));
           break;
         case "L":
-          canvasMatrixArray = isValidCommand("L", obj.L, canvasParams)
-            ? checkError(
-                canvasMatrixArray,
-                createLine(
-                  canvasMatrixArray[canvasMatrixArray.length - 1],
-                  ...obj.L
-                )
-              )
-            : canvasMatrixArray;
+          const canvasWithLine = createLine(
+            canvasMatrixArray[canvasMatrixArray.length - 1],
+            ...obj.L
+          );
+
+          if (isValidCommand("L", obj.L, canvasParams)) {
+            canvasMatrixArray = checkError(canvasMatrixArray, canvasWithLine);
+          } else
+            errorsArray.push(
+              "Can’t draw a line, please check command and coordinates"
+            );
+
+          canvasWithLine ||
+            errorsArray.push(
+              "Can’t draw a line, please check command and coordinates"
+            );
           break;
         case "R":
-          canvasMatrixArray = isValidCommand("R", obj.R, canvasParams)
-            ? checkError(
-                canvasMatrixArray,
-                createRectangle(
-                  canvasMatrixArray[canvasMatrixArray.length - 1],
-                  ...obj.R
-                )
+          if (isValidCommand("R", obj.R, canvasParams)) {
+            canvasMatrixArray = checkError(
+              canvasMatrixArray,
+              createRectangle(
+                canvasMatrixArray[canvasMatrixArray.length - 1],
+                ...obj.R
               )
-            : canvasMatrixArray;
+            );
+          } else
+            errorsArray.push(
+              "Can’t draw a rectangle, please check command and coordinates"
+            );
           break;
         case "B":
-          canvasMatrixArray = isValidCommand("B", obj.B, canvasParams)
-            ? checkError(
-                canvasMatrixArray,
-                bucketFill(
-                  canvasMatrixArray[canvasMatrixArray.length - 1],
-                  canvasParams,
-                  ...obj.B
-                )
+          if (isValidCommand("B", obj.B, canvasParams)) {
+            canvasMatrixArray = checkError(
+              canvasMatrixArray,
+              bucketFill(
+                canvasMatrixArray[canvasMatrixArray.length - 1],
+                canvasParams,
+                ...obj.B
               )
-            : canvasMatrixArray;
+            );
+          } else
+            errorsArray.push(
+              "Can’t fill the canvas, please check command and coordinates"
+            );
           break;
         default:
           break;
@@ -57,10 +74,8 @@ export const drawing = commands => {
   });
 
   const outputCanvas = fromMatrixToString(canvasMatrixArray);
-  return {
-    text: outputCanvas,
-    href: `data:text/plain;content-disposition=attachment;filename=file,${outputCanvas}`
-  };
+
+  return createOutputObject(outputCanvas, errorsArray);
 };
 
 const bucketFill = (canvas, canvasParams, x, y, c) => {

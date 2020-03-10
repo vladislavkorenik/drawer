@@ -2,3 +2,7 @@
   width: auto;
   margin-top: 50px;
 }
+
+.custom-file-input {
+  cursor: pointer;
+}

@@ -9,6 +9,8 @@ function App() {
   const [fileData, setFileData] = useState([]);
   const [outputDate, setOutputData] = useState({
     text: "No data",
+    errors: ["No errors"],
+    hasError: false,
     href: null
   });
 
@@ -21,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <FileInput setFileData={setFileData} setOutputData={setOutputData} />
-      <DataOutput data={outputDate.text} />
+      <DataOutput data={outputDate} />
       <DownloadButton href={outputDate.href} />
     </div>
   );

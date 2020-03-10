@@ -1,9 +1,6 @@
-import { isNumericArray } from "./isNumericArray";
-
-export const isDotVisited = (x, y, visitedArray) =>
-  visitedArray.some(coordinate => x === coordinate.x && y === coordinate.y);
-
 export const isValidCommand = (commandName, commandParams, canvasParams) => {
+
+
   switch (commandName) {
     case "C":
       return (
@@ -35,10 +32,13 @@ export const isValidCommand = (commandName, commandParams, canvasParams) => {
   }
 };
 
+export const isDotVisited = (x, y, visitedArray) =>
+  visitedArray.some(coordinate => x === coordinate.x && y === coordinate.y);
+
 export const checkError = (array, createFunc) =>
   createFunc ? [...array, createFunc] : [...array];
 
-export const isCorrectCords = (canvasParams, commandParams) => {
+const isCorrectCords = (canvasParams, commandParams) => {
   let i = 0;
   let isZero = commandParams.some(num => num <= 0);
 
@@ -54,4 +54,14 @@ export const isCorrectCords = (canvasParams, commandParams) => {
   }
 
   return !isZero;
+};
+
+const isNumericArray = array => {
+  for (let i = 0; i < array.length; i++) {
+    if (isNaN(parseFloat(array[i])) && !isFinite(array[i])) {
+      return false;
+    }
+  }
+
+  return true;
 };
