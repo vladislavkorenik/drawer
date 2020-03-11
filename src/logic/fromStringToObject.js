@@ -1,8 +1,10 @@
-export const fromStringToObject = str => {
+export const fromStringToObject = (str = "") => {
   const commandsArr = str.split("\n");
-  return commandsArr.map(item => {
-    return getCommands(item.trim().split(" "));
-  });
+  return str
+    ? commandsArr.map(item => {
+        return getCommands(item.trim().split(" "));
+      })
+    : {};
 };
 
 const getCommands = command => {
@@ -11,7 +13,7 @@ const getCommands = command => {
   return {
     [commandType]:
       commandType !== "B"
-        ? [...commandValue.map(element => +element )]
+        ? [...commandValue.map(element => +element)]
         : [+commandValue[0], +commandValue[1], commandValue[2]]
   };
 };

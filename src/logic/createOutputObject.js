@@ -1,4 +1,8 @@
-export const createOutputObject = (text, errors, href = true) => {
+export const createOutputObject = (
+  text = "No data",
+  errors = [],
+  href = null
+) => {
   return {
     text: text,
     errors: errors.length ? errors : ["No errors"],

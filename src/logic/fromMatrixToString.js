@@ -1,4 +1,4 @@
-export const fromMatrixToString = matrixArray => {
+export const fromMatrixToString = (matrixArray = []) => {
   let str = "";
 
   matrixArray.forEach(item => {
@@ -7,3 +7,4 @@ export const fromMatrixToString = matrixArray => {
 
   return str;
 };
+

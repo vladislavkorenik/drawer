@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="shadow pt-5 p-2 mb-3 mt-3 bg-light rounded dataOutput"
+  style={
+    Object {
+      "maxWidth": "300px",
+      "minHeight": "500px",
+      "minWidth": "300px",
+      "textAlign": "center",
+    }
+  }
+>
+  <button
+    className="dataOutput__button btn btn-danger"
+    onClick={[Function]}
+  >
+    Errors
+  </button>
+  <pre>
+    No data
+  </pre>
+</div>
+`;
+
+exports[`renders without crashing 2`] = `
+<div
+  className="shadow pt-5 p-2 mb-3 mt-3 bg-light rounded dataOutput"
+  style={
+    Object {
+      "maxWidth": "300px",
+      "minHeight": "500px",
+      "minWidth": "300px",
+      "textAlign": "center",
+    }
+  }
+>
+  <button
+    className="dataOutput__button btn btn-secondary"
+    onClick={[Function]}
+  >
+    Errors
+  </button>
+  <pre>
+    No data
+  </pre>
+</div>
+`;
+
+exports[`renders without crashing 3`] = `
+<div
+  className="shadow pt-5 p-2 mb-3 mt-3 bg-light rounded dataOutput"
+  style={
+    Object {
+      "maxWidth": "300px",
+      "minHeight": "500px",
+      "minWidth": "300px",
+      "textAlign": "center",
+    }
+  }
+>
+  <button
+    className="dataOutput__button btn btn-secondary"
+    onClick={[Function]}
+  >
+    Errors
+  </button>
+  <pre>
+    some data ---11-1-
+  </pre>
+</div>
+`;

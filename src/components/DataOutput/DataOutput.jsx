@@ -10,15 +10,7 @@ export const DataOutput = ({ data }) => {
     : "dataOutput__button btn btn-secondary";
 
   return (
-    <div
-      className="shadow pt-5 p-2 mb-3 mt-3 bg-light rounded dataOutput"
-      style={{
-        minHeight: "500px",
-        minWidth: "300px",
-        maxWidth: "300px",
-        textAlign: "center"
-      }}
-    >
+    <div className="shadow pt-5 p-2 mb-3 mt-3 bg-light rounded dataOutput">
       <button
         className={buttonStyle}
         onClick={() => setHasErrors(!buttonActive)}

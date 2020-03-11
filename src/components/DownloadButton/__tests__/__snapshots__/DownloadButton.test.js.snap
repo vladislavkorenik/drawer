@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with href 1`] = `
+<a
+  className="mb-3 display-4 btn btn-light"
+  download="output"
+  href="something"
+  style={
+    Object {
+      "fontSize": "something",
+      "textAlign": "center",
+    }
+  }
+>
+  Download canvas
+</a>
+`;
+
+exports[`renders without crashing 1`] = `
+<p
+  className="mb-3 alert alert-light"
+  download={null}
+  href={false}
+  style={
+    Object {
+      "fontSize": "87.5%",
+      "textAlign": "center",
+    }
+  }
+>
+  Upload your .txt file with commands
+</p>
+`;
+
+exports[`renders without href 1`] = `
+<p
+  className="mb-3 alert alert-light"
+  download={null}
+  href={false}
+  style={
+    Object {
+      "fontSize": "87.5%",
+      "textAlign": "center",
+    }
+  }
+>
+  Upload your .txt file with commands
+</p>
+`;

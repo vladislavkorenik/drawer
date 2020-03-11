@@ -11,7 +11,7 @@ export const drawing = commands => {
   if (!commands[0].hasOwnProperty("C") || !isValidCommand("C", commands[0].C)) {
     errorsArray.push("Can't draw without canvas");
 
-    return createOutputObject("No data", errorsArray, null);
+    return createOutputObject("No data", errorsArray);
   }
 
   commands.forEach(obj => {
@@ -26,6 +26,12 @@ export const drawing = commands => {
             ...obj.L
           );
 
+          if (!canvasWithLine) {
+            errorsArray.push(
+              "Can’t draw a line, please check command and coordinates"
+            );
+            break;
+          }
           if (isValidCommand("L", obj.L, canvasParams)) {
             canvasMatrixArray = checkError(canvasMatrixArray, canvasWithLine);
           } else
@@ -33,10 +39,6 @@ export const drawing = commands => {
               "Can’t draw a line, please check command and coordinates"
             );
 
-          canvasWithLine ||
-            errorsArray.push(
-              "Can’t draw a line, please check command and coordinates"
-            );
           break;
         case "R":
           if (isValidCommand("R", obj.R, canvasParams)) {
@@ -75,7 +77,7 @@ export const drawing = commands => {
 
   const outputCanvas = fromMatrixToString(canvasMatrixArray);
 
-  return createOutputObject(outputCanvas, errorsArray);
+  return createOutputObject(outputCanvas, errorsArray,true);
 };
 
 const bucketFill = (canvas, canvasParams, x, y, c) => {

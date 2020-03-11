@@ -2,20 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bd909eb-0e35-4911-baea-c0ead082eade" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/DataOutput/DataOutput.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ErrorsList/ErrorsList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ErrorsList/ErrorsList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ErrorsList/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/createOutputObject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DataOutput/__tests__/DataOutput.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DataOutput/__tests__/__snapshots__/DataOutput.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DownloadButton/__tests__/DownloadButton.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DownloadButton/__tests__/__snapshots__/DownloadButton.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/__tests__/createOutputObject.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/__tests__/fromMatrixToString.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/__tests__/fromStringToObject.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_input/empty.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_input/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_input/input1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_input/inputWithLineMistake.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_input/inputWithoutCanvas.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_input/inputWithoutCanvasParams.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_input/inputWithoutFillParams.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_input/inputWithoutLineParams.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_input/inputWithoutRectangleParams.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DataOutput/DataOutput.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DataOutput/DataOutput.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DataOutput/DataOutput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DataOutput/DataOutput.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DownloadButton/DownloadButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DownloadButton/DownloadButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FileInput/FileInput.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FileInput/FileInput.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/createOutputObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/createOutputObject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/drawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/isNumericArray.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/fromMatrixToString.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/fromMatrixToString.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/fromStringToObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/fromStringToObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,22 +56,56 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/DownloadButton" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\vlady\AppData\Roaming\npm\node_modules\prettier" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Node.js.createOutputObject.js">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\test-task\src\components\DownloadButton" />
+      <recent name="D:\test-task\src\logic\__tests__" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.fromMatrixToString.js">
+    <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/DataOutput/__tests__/DataOutput.test.js" />
+      <test-names>
+        <test-name value="renders without crashing" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
     <configuration name="createOutputObject.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/logic/createOutputObject.js" working-dir="$PROJECT_DIR$/src/logic">
+      <method v="2" />
+    </configuration>
+    <configuration name="fromMatrixToString.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/logic/fromMatrixToString.js" working-dir="$PROJECT_DIR$/src/logic">
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -67,8 +118,22 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="Node.js.fromMatrixToString.js" />
+        <item itemvalue="Jest.renders without crashing" />
         <item itemvalue="Node.js.createOutputObject.js" />
       </list>
     </recent_temporary>
@@ -88,7 +153,9 @@
       <workItem from="1583443323574" duration="7220000" />
       <workItem from="1583502322834" duration="19320000" />
       <workItem from="1583767658590" duration="6472000" />
-      <workItem from="1583841720598" duration="7665000" />
+      <workItem from="1583841720598" duration="17162000" />
+      <workItem from="1583919844230" duration="8520000" />
+      <workItem from="1583938689554" duration="646000" />
     </task>
     <servers />
   </component>
@@ -103,34 +170,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583843903590" />
+    <state x="256" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583934421453">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="256" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583934421453" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583428112238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583428112238" />
-    <state width="936" height="280" key="GridCell.Tab.0.bottom" timestamp="1583846647831">
+    <state width="950" height="277" key="GridCell.Tab.0.bottom" timestamp="1583939335553">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583846647831" />
-    <state width="936" height="280" key="GridCell.Tab.0.center" timestamp="1583846647831">
+    <state width="950" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583939335553" />
+    <state width="950" height="277" key="GridCell.Tab.0.center" timestamp="1583939335553">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583846647831" />
-    <state width="936" height="280" key="GridCell.Tab.0.left" timestamp="1583846647831">
+    <state width="950" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583939335553" />
+    <state width="950" height="277" key="GridCell.Tab.0.left" timestamp="1583939335553">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583846647831" />
-    <state width="936" height="280" key="GridCell.Tab.0.right" timestamp="1583846647831">
+    <state width="950" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583939335553" />
+    <state width="950" height="277" key="GridCell.Tab.0.right" timestamp="1583939335553">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583846647831" />
+    <state width="950" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583939335553" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1583435769969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583435769969" />
-    <state x="143" y="242" key="run.anything.popup" timestamp="1583575938368">
+    <state x="143" y="242" key="run.anything.popup" timestamp="1583868009701">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="143" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583575938368" />
+    <state x="143" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583868009701" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583847062068">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
